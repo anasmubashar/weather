@@ -6,7 +6,7 @@ import Forecast from './forecast.jsx'
 
 export default function Weather() {
     
-    const[url,SetUrl] = useState('./src/assets/islamabad.jpeg')
+    const[url,SetUrl] = useState('weather/src/assets/islamabad.jpeg')
     const [city, setCity] = useState('islamabad')
     const [forecast, setForecast] = useState([]);
     const [weather, setWeather] = useState({})
@@ -106,16 +106,16 @@ export default function Weather() {
         setCity(e.target.value);
     };
     
-    let image ='./src/assets/sun.png';
+    let image ='weather/src/assets/sun.png';
 
     if(weather.Main == 'Thunderstorm'){
-        image ='./src/assets/storm.png';
+        image ='weather/src/assets/storm.png';
     } else if(weather.Main == 'Rain'){
-        image='./src/assets/rainy-day.png'
+        image='weather/src/assets/rainy-day.png'
     } else if(weather.Main == 'Clouds'){
-        image = './src/assets/cloudy.png';
+        image = 'weather/src/assets/cloudy.png';
     } else {
-        image ='./src/assets/sun.png';
+        image ='weather/src/assets/sun.png';
     }
 
     let img ='./src/assets/sun_Color=On.png';
