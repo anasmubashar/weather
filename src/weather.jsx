@@ -18,7 +18,7 @@ export default function Weather() {
             const {urls} = results[0];
             SetUrl(urls.regular)
         })
-    },[city,Unsplash_Api_Key])
+    },[city])
     useEffect(() => {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=51122b41f541e37ccc93611c7a8d7bbf`)
         .then(res => res.json())
@@ -50,7 +50,7 @@ export default function Weather() {
                 }
             )
         })
-    }, [city,OpenWeatherMap_Api_Key]);
+    }, [city]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -88,7 +88,7 @@ export default function Weather() {
         };
       
         fetchData();
-      }, [city,OpenWeatherMap_Api_Key]);
+      }, [city]);
 
     function convertUnixToTime(unixTimestamp) {
         const date = new Date(unixTimestamp * 1000);

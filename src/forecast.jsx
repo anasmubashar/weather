@@ -23,7 +23,7 @@ function WeatherCard({forecast}) {
     <div className="h-full w-[18%] mr-2 flex flex-col justify-around items-center bg-white rounded-lg shadow-md">
         <p className="text-gray-400 text-sm md:text-base font-mono font-bold">{forecast.date}</p>
         <img className="object cover w-[40%]" src={image} alt="sun photo" />
-        <p className="text-gray-400 text-xs md:text-sm font-mono font-bold">{forecast.temp}° C</p>
+        <p className="text-gray-400 text-xs md:text-sm font-mono font-bold">{Math.round(forecast.temp - 273.15)}° C</p>
     </div>
     );
 }
