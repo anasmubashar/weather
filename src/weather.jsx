@@ -3,7 +3,6 @@ import React from 'react'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Forecast from './forecast.jsx'
-import { Unsplash_Api_Key,OpenWeatherMap_Api_Key } from './data.js';
 
 export default function Weather() {
     
@@ -12,7 +11,7 @@ export default function Weather() {
     const [forecast, setForecast] = useState([]);
     const [weather, setWeather] = useState({})
     useEffect(() => {
-        fetch(`https://api.unsplash.com/search/photos?page=1&query=${city}&per_page=1&client_id=${Unsplash_Api_Key}`)
+        fetch(`https://api.unsplash.com/search/photos?page=1&query=${city}&per_page=1&client_id=XiMno4l_C8G89rdysNjzAYvRqSQvenlwTtO78w9GViI`)
         .then(res => res.json())
         .then(data => {
             const {results} = data;
@@ -21,7 +20,7 @@ export default function Weather() {
         })
     },[city,Unsplash_Api_Key])
     useEffect(() => {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${OpenWeatherMap_Api_Key}`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=51122b41f541e37ccc93611c7a8d7bbf`)
         .then(res => res.json())
         .then(data => {
             const {main, name, sys, weather, wind} = data;
@@ -56,7 +55,7 @@ export default function Weather() {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${OpenWeatherMap_Api_Key}`);
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=51122b41f541e37ccc93611c7a8d7bbf`);
             if (!response.ok) {
               throw new Error('Network response was not ok');
             }
