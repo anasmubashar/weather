@@ -106,26 +106,26 @@ export default function Weather() {
         setCity(e.target.value);
     };
     
-    let image ='weather/src/assets/sun.png';
+    let image ='./weather app/weather/src/assets/sun.png';
 
     if(weather.Main == 'Thunderstorm'){
-        image ='weather/src/assets/storm.png';
+        image ='./weather app/weather/src/assets/storm.png';
     } else if(weather.Main == 'Rain'){
-        image='weather/src/assets/rainy-day.png'
+        image='./weather app/weather/src/assets/rainy-day.png'
     } else if(weather.Main == 'Clouds'){
-        image = 'weather/src/assets/cloudy.png';
+        image = './weather app/weather/src/assets/cloudy.png';
     } else {
-        image ='weather/src/assets/sun.png';
+        image ='./weather app/weather/src/assets/sun.png';
     }
 
     let img ='./src/assets/sun_Color=On.png';
 
     if(weather.Main == 'Thunderstorm' || weather.Main == 'Rain'){
-        img ='./src/assets/Rain_Color=On.png';
+        img ='./weather app/weather/src/assets/Rain_Color=On.png';
     } else if(weather.Main == 'Clouds' || weather.Main == 'smoke'){
-        img = './src/assets/Color=On_cloud.png';
+        img = './weather app/weather/src/assets/Color=On_cloud.png';
     } else {
-        img ='./src/assets/sun_Color=On.png';
+        img ='./weather app/weather/src/assets/sun_Color=On.png';
     }
 
     const now = new Date();
