@@ -4,7 +4,7 @@ import { useEffect } from "react";
 function WeatherCard({forecast}) {
 
     if (!forecast || !forecast.main) {
-        return null; // Or return a loading spinner or a placeholder
+        return null; 
     }
     
     let image ='weather/src/assets/sun.png';

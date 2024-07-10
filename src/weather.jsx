@@ -109,23 +109,23 @@ export default function Weather() {
     let image ='/src/assets/sun.png';
 
     if(weather.Main == 'Thunderstorm'){
-        image ='/src/assets/storm.png';
+        image ='./src/assets/storm.png';
     } else if(weather.Main == 'Rain'){
-        image='/src/assets/rainy-day.png'
+        image='./src/assets/rainy-day.png'
     } else if(weather.Main == 'Clouds'){
-        image = '/src/assets/cloudy.png';
+        image = './src/assets/cloudy.png';
     } else {
-        image ='/src/assets/sun.png';
+        image ='./src/assets/sun.png';
     }
 
-    let img ='/src/assets/sun_Color=On.png';
+    let img ='./src/assets/sun_Color=On.png';
 
     if(weather.Main == 'Thunderstorm' || weather.Main == 'Rain'){
-        img ='/src/assets/Rain_Color=On.png';
+        img ='./src/assets/Rain_Color=On.png';
     } else if(weather.Main == 'Clouds' || weather.Main == 'smoke'){
-        img = '/src/assets/Color=On_cloud.png';
+        img = './src/assets/Color=On_cloud.png';
     } else {
-        img ='/src/assets/sun_Color=On.png';
+        img ='./src/assets/sun_Color=On.png';
     }
 
     const now = new Date();
