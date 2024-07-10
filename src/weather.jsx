@@ -6,7 +6,7 @@ import Forecast from './forecast.jsx'
 
 export default function Weather() {
     
-    const[url,SetUrl] = useState('./src/assets/islamabad.jpeg')
+    const[url,SetUrl] = useState('/islamabad.jpeg')
     const [city, setCity] = useState('islamabad')
     const [forecast, setForecast] = useState([]);
     const [weather, setWeather] = useState({})
@@ -106,26 +106,26 @@ export default function Weather() {
         setCity(e.target.value);
     };
     
-    let image ='/src/assets/sun.png';
+    let image ='/sun.png';
 
     if(weather.Main == 'Thunderstorm'){
-        image ='./src/assets/storm.png';
+        image ='/storm.png';
     } else if(weather.Main == 'Rain'){
-        image='./src/assets/rainy-day.png'
+        image='/rainy-day.png'
     } else if(weather.Main == 'Clouds'){
-        image = './src/assets/cloudy.png';
+        image = '/cloudy.png';
     } else {
-        image ='./src/assets/sun.png';
+        image ='/sun.png';
     }
 
-    let img ='./src/assets/sun_Color=On.png';
+    let img ='/sun_Color=On.png';
 
     if(weather.Main == 'Thunderstorm' || weather.Main == 'Rain'){
-        img ='./src/assets/Rain_Color=On.png';
+        img ='/Rain_Color=On.png';
     } else if(weather.Main == 'Clouds' || weather.Main == 'smoke'){
-        img = './src/assets/Color=On_cloud.png';
+        img = '/Color=On_cloud.png';
     } else {
-        img ='./src/assets/sun_Color=On.png';
+        img ='/sun_Color=On.png';
     }
 
     const now = new Date();

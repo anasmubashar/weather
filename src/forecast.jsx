@@ -7,16 +7,16 @@ function WeatherCard({forecast}) {
         return null; 
     }
     
-    let image ='./weather/src/assets/sun.png';
+    let image ='/sun.png';
 
     if(forecast.main == 'Thunderstorm'){
-        image ='./weather/src/assets/storm.png';
+        image ='/storm.png';
     } else if(forecast.main == 'Rain'){
-        image='./weather/src/assets/rainy-day.png'
+        image='/rainy-day.png'
     } else if(forecast.main == 'Clouds'){
-        image = './weather/src/assets/cloudy.png';
+        image = '/cloudy.png';
     } else {
-        image ='./weather/src/assets/sun.png';
+        image ='/sun.png';
     }
     
     return(
