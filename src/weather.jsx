@@ -158,7 +158,7 @@ export default function Weather() {
                <p className='font-mono font-semibold'>{weather.desc}</p>
             </div>
             <div className='flex ml-10 items-center mt-4'>
-               <img className='object-cover mr-2' src="./src/assets/Color=On.png" alt="" />
+               <img className='object-cover mr-2' src="/Color=On.png" alt="" />
                <p className='font-mono font-semibold'>{weather.speed} km/h</p>
             </div>
             <div className='w-[90%] h-[10%]  mx-auto rounded-lg flex justify-center items-center mt-6 relative'>
