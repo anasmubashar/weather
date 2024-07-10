@@ -7,16 +7,16 @@ function WeatherCard({forecast}) {
         return null; 
     }
     
-    let image ='weather/src/assets/sun.png';
+    let image ='./weather/src/assets/sun.png';
 
     if(forecast.main == 'Thunderstorm'){
-        image ='weather/src/assets/storm.png';
+        image ='./weather/src/assets/storm.png';
     } else if(forecast.main == 'Rain'){
-        image='weather/src/assets/rainy-day.png'
+        image='./weather/src/assets/rainy-day.png'
     } else if(forecast.main == 'Clouds'){
-        image = 'weather/src/assets/cloudy.png';
+        image = './weather/src/assets/cloudy.png';
     } else {
-        image ='weather/src/assets/sun.png';
+        image ='./weather/src/assets/sun.png';
     }
     
     return(
@@ -65,14 +65,14 @@ export default function Forecast({forecast,weather}) {
                 </p>
                 <div className="mt-6 w-[90%] h-[23%] rounded-xl bg-white shadow-sm">
                     <div className="flex justify-around w-full h-[50%] items-center">
-                    <Highlights img="weather/src/assets/thermometer.png" title="Real Feel" temp={weather.feels_like} />
-                    <Highlights img="weather/src/assets/wind.png" title="Wind" temp={weather.speed} unit="km/h" />
-                    <Highlights img="weather/src/assets/sunrise.png" title="Sunrise" temp={weather.sunrise} />
+                    <Highlights img="./weather/src/assets/thermometer.png" title="Real Feel" temp={weather.feels_like} />
+                    <Highlights img="./weather/src/assets/wind.png" title="Wind" temp={weather.speed} unit="km/h" />
+                    <Highlights img="./weather/src/assets/sunrise.png" title="Sunrise" temp={weather.sunrise} />
                     </div>
                     <div className="flex justify-around w-full h-[50%] items-center">
-                    <Highlights img="weather/src/assets/humidity.png" title="Humidity" temp={weather.humidity} unit="%" />
-                    <Highlights img="weather/src/assets/barometer.png" title="Pressure" temp={weather.pressure} unit="hPa" />
-                    <Highlights img="weather/src/assets/sunset.png" title="Sunset" temp={weather.sunset} />
+                    <Highlights img="./weather/src/assets/humidity.png" title="Humidity" temp={weather.humidity} unit="%" />
+                    <Highlights img="./weather/src/assets/barometer.png" title="Pressure" temp={weather.pressure} unit="hPa" />
+                    <Highlights img="./weather/src/assets/sunset.png" title="Sunset" temp={weather.sunset} />
                     </div>
                 </div>
             </div>
