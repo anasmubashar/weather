@@ -144,7 +144,7 @@ export default function Weather() {
         <div className='flex flex-col md:flex-row'>
         <div className="h-screen w-full md:w-[40%] bg-white">
             <div className='flex mt-4 items-center ml-10'>
-                <img className='size-5 object-contain mr-2' src="./src/assets/search.png" alt="Search Icon"/>
+                <img className='size-5 object-contain mr-2' src="/search.png" alt="Search Icon"/>
                 <input className='font-sans' id='city' value={city}  type="text" placeholder='Select City..' name='city' onChange={handleCityChange} />
             </div>
             <div className="ml-10">
